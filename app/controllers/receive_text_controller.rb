@@ -31,8 +31,6 @@ class ReceiveTextController < ActionController::Base
     bot = Slackbotsy::Bot.new(@config) do
        hear /(.+)/ do |mdata|
 
-        number_to_send_to = params[:number_to_send_to]
-
         twilio_sid = "AC4323dda0811444bd2f359135fa41e002"
         twilio_token = "8fab2a62bdc97c913c27f1d7c42e30bb"
         twilio_phone_number = "+441706304028"
