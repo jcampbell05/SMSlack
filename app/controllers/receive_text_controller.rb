@@ -12,8 +12,7 @@ class ReceiveTextController < ActionController::Base
       'channel'   => '#the-team',
       'name'      => 'The Wizard',
       'api_token' => 'xoxb-16016274358-R8JWOSfV9BNOfZPhLu1GfUeL',
-      'outgoing_token' => 'DqW9KhugnwefXqidAdaBhXvj',
-      'slash_token' => 'DqW9KhugnwefXqidAdaBhXvj'
+      'outgoing_token' => 'DqW9KhugnwefXqidAdaBhXvj'
     }
   end
 
@@ -45,13 +44,10 @@ class ReceiveTextController < ActionController::Base
           :to => "+447523279698",
           :body => "I heard #{user_name} say '#{mdata[1]}' in #{channel_name}"
         )
-        logger.info "Texting"
       end
 
 
     end
-
-    logger.info "Boom"
 
     bot.handle_item(params)
   end
