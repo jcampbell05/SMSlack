@@ -13,8 +13,8 @@ class ReceiveTextController < ActionController::Base
 
     config = {
       'channel'   => '#general',
-      'name'      => 'SMSBot',
-      'api_token' => 'xoxb-16013476785-gLOKajlo2EdZKElZIedQnSeK'
+      'name'      => 'The Wizard',
+      'api_token' => 'xoxb-16016274358-R8JWOSfV9BNOfZPhLu1GfUeL'
     }
 
     bot = Slackbotsy::Bot.new(config) do
