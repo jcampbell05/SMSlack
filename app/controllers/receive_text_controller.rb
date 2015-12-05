@@ -12,7 +12,8 @@ class ReceiveTextController < ActionController::Base
       'channel'   => '#the-team',
       'name'      => 'The Wizard',
       'api_token' => 'xoxb-16016274358-R8JWOSfV9BNOfZPhLu1GfUeL',
-      'outgoing_token' => 'DqW9KhugnwefXqidAdaBhXvj'
+      'outgoing_token' => 'DqW9KhugnwefXqidAdaBhXvj',
+      'slash_token' => 'DqW9KhugnwefXqidAdaBhXvj'
     }
   end
 
@@ -49,6 +50,8 @@ class ReceiveTextController < ActionController::Base
 
 
     end
+
+    logger.info "Boom"
 
     bot.handle_item(params)
   end
