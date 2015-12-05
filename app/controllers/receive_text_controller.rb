@@ -5,12 +5,16 @@ require 'twilio-ruby'
 
 class ReceiveTextController < ActionController::Base
 
-  config = {
-    'channel'   => '#the-team',
-    'name'      => 'The Wizard',
-    'api_token' => 'xoxb-16016274358-R8JWOSfV9BNOfZPhLu1GfUeL',
-    'outgoing_token' => 'DqW9KhugnwefXqidAdaBhXvj'
-  }
+  def initialize
+    super
+
+    @config = {
+      'channel'   => '#the-team',
+      'name'      => 'The Wizard',
+      'api_token' => 'xoxb-16016274358-R8JWOSfV9BNOfZPhLu1GfUeL',
+      'outgoing_token' => 'DqW9KhugnwefXqidAdaBhXvj'
+    }
+  end
 
   def index
     # let's pretend that we've mapped this action to
@@ -19,12 +23,12 @@ class ReceiveTextController < ActionController::Base
     message_body = params["Body"]
     from_number = params["From"]
 
-    bot = Slackbotsy::Bot.new(config)
+    bot = Slackbotsy::Bot.new(@config)
     bot.post_message("#{message_body}")
   end
 
   def hear
-    bot = Slackbotsy::Bot.new(config) do
+    bot = Slackbotsy::Bot.new(@config) do
        hear /echo\s+(.+)/ do |mdata|
 
         number_to_send_to = params[:number_to_send_to]
