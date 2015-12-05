@@ -40,7 +40,7 @@ class ReceiveTextController < ActionController::Base
         @twilio_client = Twilio::REST::Client.new twilio_sid, twilio_token
 
         @twilio_client.account.sms.messages.create(
-          :from => "+1#{twilio_phone_number}",
+          :from => "#{twilio_phone_number}",
           :to => "+447523279698",
           :body => "I heard #{user_name} say '#{mdata[1]}' in #{channel_name}"
         )
