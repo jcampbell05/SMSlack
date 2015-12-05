@@ -8,8 +8,8 @@ class ReceiveTextController < ApplicationController
 
     config = {
       'channel'   => '#general',
-      'name'      => 'SMSlack',
-      'api_token' => 'xoxb-16010001943-siHf7Fqs3MnP952DOwnEPRAK'
+      'name'      => 'SMSBot',
+      'api_token' => 'xoxb-16013476785-gLOKajlo2EdZKElZIedQnSeK'
     }
 
     bot = Slackbotsy::Bot.new(config)
