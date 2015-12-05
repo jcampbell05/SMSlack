@@ -19,6 +19,6 @@ class ReceiveTextController < ActionController::Base
 
     bot = Slackbotsy::Bot.new(config) do
     end
-    bot.say("#{from_number} -> #{message_body}")
+    bot.post_message("#{from_number} -> #{message_body}")
   end
 end
