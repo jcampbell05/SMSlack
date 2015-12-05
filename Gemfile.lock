@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/jcampbell05/slackbotsy
-  revision: 437ccf3747b6f59cb9eb0b4187f7f6825c46505d
+  revision: 16605437c4249ec3e424352ce0c8b3e90a24f351
   specs:
     slackbotsy (0.4.2)
       httmultiparty
@@ -152,7 +152,7 @@ GEM
       rack-protection (~> 1.4)
       tilt (>= 1.3, < 3)
     spring (1.5.0)
-    sprockets (3.5.0)
+    sprockets (3.5.1)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
     sprockets-rails (2.3.3)
