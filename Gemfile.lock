@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/jcampbell05/slackbotsy
-  revision: 6488218e7ef12e5e4f8e7e6296cd7ecb196da750
+  revision: 437ccf3747b6f59cb9eb0b4187f7f6825c46505d
   specs:
     slackbotsy (0.4.2)
       httmultiparty
