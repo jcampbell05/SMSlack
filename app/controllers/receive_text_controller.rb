@@ -12,7 +12,7 @@ class ReceiveTextController < ActionController::Base
     from_number = params["From"]
 
     config = {
-      'channel'   => '#general',
+      'channel'   => '#the-team',
       'name'      => 'The Wizard',
       'api_token' => 'xoxb-16016274358-R8JWOSfV9BNOfZPhLu1GfUeL'
     }
