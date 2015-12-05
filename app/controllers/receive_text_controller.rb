@@ -29,7 +29,7 @@ class ReceiveTextController < ActionController::Base
 
   def hear
     bot = Slackbotsy::Bot.new(@config) do
-       hear /echo\s+(.+)/ do |mdata|
+       hear /(.+)/ do |mdata|
 
         number_to_send_to = params[:number_to_send_to]
 
