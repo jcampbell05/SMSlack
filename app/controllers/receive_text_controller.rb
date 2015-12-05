@@ -5,18 +5,19 @@ require 'twilio-ruby'
 
 class ReceiveTextController < ActionController::Base
 
+  config = {
+    'channel'   => '#the-team',
+    'name'      => 'The Wizard',
+    'api_token' => 'xoxb-16016274358-R8JWOSfV9BNOfZPhLu1GfUeL',
+    'outgoing_token' => 'DqW9KhugnwefXqidAdaBhXvj'
+  }
+
   def index
     # let's pretend that we've mapped this action to
     # http://localhost:3000/sms in the routes.rb file
 
     message_body = params["Body"]
     from_number = params["From"]
-
-    config = {
-      'channel'   => '#the-team',
-      'name'      => 'The Wizard',
-      'api_token' => 'xoxb-16016274358-R8JWOSfV9BNOfZPhLu1GfUeL'
-    }
 
     bot = Slackbotsy::Bot.new(config)
     bot.post_message("#{message_body}")
