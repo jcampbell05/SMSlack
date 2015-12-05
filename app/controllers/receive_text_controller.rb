@@ -45,8 +45,6 @@ class ReceiveTextController < ActionController::Base
           :body => "I heard #{user_name} say '#{mdata[1]}' in #{channel_name}"
         )
       end
-
-
     end
 
     bot.handle_item(params)
