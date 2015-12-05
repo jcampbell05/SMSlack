@@ -40,7 +40,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'twilio-ruby'
 
 #Slack Bot
-gem 'slackbotsy'
+gem 'slackbotsy', :git => 'https://github.com/jcampbell05/slackbotsy'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
