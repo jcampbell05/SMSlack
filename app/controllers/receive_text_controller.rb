@@ -1,6 +1,7 @@
 require 'slackbotsy'
 require 'sinatra'
 require 'open-uri'
+require 'twilio-ruby'
 
 class ReceiveTextController < ActionController::Base
 
@@ -23,7 +24,7 @@ class ReceiveTextController < ActionController::Base
 
   def hear
     bot = Slackbotsy::Bot.new(config) do
-      hear /echo\s+(.+)/ do |mdata|
+       hear /echo\s+(.+)/ do |mdata|
 
         number_to_send_to = params[:number_to_send_to]
 
@@ -40,7 +41,9 @@ class ReceiveTextController < ActionController::Base
         )
       end
 
-      bot.handle_item(params)
+
     end
+
+    bot.handle_item(params)
   end
 end
