@@ -44,6 +44,7 @@ class ReceiveTextController < ActionController::Base
           :to => "+447523279698",
           :body => "I heard #{user_name} say '#{mdata[1]}' in #{channel_name}"
         )
+        puts "Texting"
       end
 
 
