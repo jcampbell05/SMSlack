@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'receive_text#index'
-  get  'hear' => 'receive_text#hear'
+  post  'hear' => 'receive_text#hear'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
