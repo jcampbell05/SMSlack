@@ -1,4 +1,9 @@
-class ReceiveTextController < ApplicationController
+require 'slackbotsy'
+require 'sinatra'
+require 'open-uri'
+
+class ReceiveTextController < ActionController::Base
+  
   def index
     # let's pretend that we've mapped this action to
     # http://localhost:3000/sms in the routes.rb file
@@ -12,7 +17,8 @@ class ReceiveTextController < ApplicationController
       'api_token' => 'xoxb-16013476785-gLOKajlo2EdZKElZIedQnSeK'
     }
 
-    bot = Slackbotsy::Bot.new(config)
+    bot = Slackbotsy::Bot.new(config) do
+    end
     bot.say("#{from_number} -> #{message_body}")
   end
 end
